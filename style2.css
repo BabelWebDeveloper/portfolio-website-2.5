@@ -116,12 +116,9 @@ nav > ul > a{
     }
     nav{
         width: 100%;
-        padding: 20px;
         flex-direction: row;
-        background-color: black;
     }
     nav > ul{
-        display: flex;
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
@@ -133,11 +130,13 @@ nav > ul > a{
 /* HEADER END HERE. */
 
 /* MAIN START HERE: */
-#mobile-title{
-    display: inline;
+section{
     text-align: center;
     padding: 20px;
     color: black;
+}
+#mobile-title{
+    display: inline;
 }
 #mobile-title >*{
     font-style: italic;
@@ -148,33 +147,21 @@ nav > ul > a{
         display: none;
     }
 }
-section{
-    text-align: center;
-}
+/* About & skills */
 article{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-article >*{
-    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
 }
 article > #circleBar{
     display: flex;
-    justify-content:space-around;
     flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
 }
 article > #circleBar > .percent{
+    min-width: 300px;
+    flex-grow: 1;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    padding: 20px 0;
 }
 article > #circleBar > .percent > svg{
     position: relative;
@@ -215,37 +202,13 @@ article > #circleBar > .percent > svg > circle#JSpercent{
 }
 article > #circleBar > .percent > .number{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #999;
-}
-#bigProjects,
-#websites{
-    width: 100%;
-}
-section > article#bigProjects > a{
-    width: 50%;
-}
-section > article#bigProjects > a > img{
-    width: 100%;
-}
-section > article#websites{
-    display: flex;
-    flex-wrap: wrap;
-}
-section > article#websites > h3{
-    width: 100%;
-}
-section > article#websites > a{
-    padding: 0;
-    max-width: 30%;
-}
-section > article#websites > a > img{
-    max-width: 50%;
 }
