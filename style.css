@@ -159,6 +159,9 @@ article{
     width: 100%;
 }
 /* About & skills */
+#aboutAndSkills{
+    padding-top: 100px;
+}
 article > #circleBar{
     display: flex;
     flex-wrap: wrap;
@@ -220,6 +223,9 @@ article > #circleBar > .percent > .number{
     flex-direction: column;
 }
 /* Portfolio */
+#portfolio{
+    padding-top: 100px;
+}
 #bigProjects{
     width: 100%;
     display: flex;
