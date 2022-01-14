@@ -1,0 +1,247 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+nav{
+    color: #fff;
+    position: fixed;
+    background: transparent;
+    /* JS */
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-end;
+    padding: 20px;
+}
+nav > ul{
+    display: none;
+    /* JS */
+    flex-direction: column;
+}
+nav > ul > a{
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 0;
+}
+/* Animated burger CSS start here: */
+#menuButtonMobile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+#menuButtonMobileBurger{
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+#menuButtonMobileBurger::before,
+#menuButtonMobileBurger::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+#menuButtonMobileBurger::before{
+    transform: translateY(-8px);
+}
+#menuButtonMobileBurger::after{
+    transform: translateY(8px);
+}
+#menuButtonMobile.open > #menuButtonMobileBurger{
+    transform: translateX(-30px);
+    background: transparent;
+    box-shadow: none;
+}
+#menuButtonMobile.open > #menuButtonMobileBurger::before{
+    transform: rotate(45deg) translate(20.8px,-20.8px);
+}
+#menuButtonMobile.open > #menuButtonMobileBurger::after{
+    transform: rotate(-45deg) translate(20.8px,20.8px);
+}
+/* Animated burger end here. */
+#header-bgc{
+    width: 100%;
+    min-height: 675px;
+    max-height: 675px;
+    background-color: rgba(128, 128, 128, 0.514);
+    background-image: url(img/bgc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+}
+#profile-div{
+    width: 490px;
+    min-height: 675px;
+    max-height: 675px;
+    background-image: url(img/profilowe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#header-bgc > h2{
+    text-align: center;
+}
+#mobile-title{
+    display: inline;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+#mobile-title >*{
+    font-style: italic;
+    font-size: 14px;
+}
+@media only screen and (min-width:414px){
+    #header-bgc{
+        display: flex;
+    }
+    #mobile-title{
+        display: none;
+    }
+}
+@media only screen and (min-width:768px){
+    header{
+        justify-content: flex-start;
+    }
+    nav{
+        width: 100%;
+        padding: 20px;
+        flex-direction: row;
+        background-color: black;
+    }
+    nav > ul{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #menuButtonMobile{
+        display: none;
+    }
+}
+section{
+    text-align: center;
+}
+article{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+article >*{
+    padding: 20px;
+}
+h2{
+    font-size: 24px;
+    padding: 20px;
+}
+article > #circleBar{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+article > #circleBar > .percent{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+article > #circleBar > .percent > svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+article > #circleBar > .percent > svg > circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    /* animation-play-state: paused; */
+    stroke: #03a9f4
+}
+article > #circleBar > .percent > svg > circle#HTMLpercent{
+    stroke-dashoffset: calc(440 - (440 * 75) / 100);
+}
+article > #circleBar > .percent > svg > circle#CSSpercent{
+    stroke-dashoffset: calc(440 - (440 * 55) / 100);
+}
+article > #circleBar > .percent > svg > circle#JSpercent{
+    stroke-dashoffset: calc(440 - (440 * 35) / 100);
+}
+@keyframes animate{
+    100%{
+        stroke-dashoffset: 440;
+    }
+}
+article > #circleBar > .percent > .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #999;
+}
+#bigProjects,
+#websites{
+    width: 100%;
+}
+section > article#bigProjects > a{
+    width: 50%;
+}
+section > article#bigProjects > a > img{
+    width: 100%;
+}
+section > article#websites{
+    display: flex;
+    flex-wrap: wrap;
+}
+section > article#websites > h3{
+    width: 100%;
+}
+section > article#websites > a{
+    padding: 0;
+    max-width: 30%;
+}
+section > article#websites > a > img{
+    max-width: 50%;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animated burger</title>
+    <link rel="stylesheet" href="animatedBurger.css">
+</head>
+<body>
+    <div class="menu-btn">
+        <div class="menu-btn-burger"></div>
+    </div>
+</body>
+<script>
+    let getMenuBtn = document.querySelector('.menu-btn')
+    let menuOpen = false
+    getMenuBtn.addEventListener('click', () => {
+        if(menuOpen === false) {
+            getMenuBtn.classList.add('open')
+            menuOpen = true
+        } else {
+            getMenuBtn.classList.remove('open')
+            menuOpen = false
+        }
+    })
+</script>
+</html>
