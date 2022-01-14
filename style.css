@@ -93,7 +93,7 @@ nav > ul > a{
     width: 100%;
     height: 675px;/*było min max*/
     background-color: rgba(128, 128, 128, 0.514);
-    background-image: url(img/bgc.png);
+    background-image: url(img/bgc-min.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
@@ -106,7 +106,7 @@ nav > ul > a{
 #profile-div{
     width: 490px;
     height: 675px;/*było min max*/
-    background-image: url(img/profilowe.png);
+    background-image: url(img/profilowe-min.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
