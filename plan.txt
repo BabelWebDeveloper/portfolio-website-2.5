@@ -1,8 +1,0 @@
-Sprawdzić ekran
-ładowanie widoku OnLoad
-Ładowanie widoku OnChange
-jeśli ekran mały wtedy widok ekran mały
-jeśli ekran duży wtedy widok ekran duży
-jeśli ekran mały wtedy ładowanie przycisku
-jeśli przycisk true wtedy widok przycisk otwarty
-jeśli przycisk false wtedy widok przycisk zamknięty
