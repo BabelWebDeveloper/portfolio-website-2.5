@@ -269,8 +269,10 @@ footer{
     align-items: center;
     flex-direction: column;
 }
-footer > h2{
+footer > h2,
+footer > h4{
     color: #fbfbfd;
+    text-decoration: none;
 }
 footer > article{
     display: flex;
