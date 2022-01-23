@@ -17,6 +17,7 @@ header{
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    background: #fbfbfd;
 }
 nav{
     color: #fbfbfd;
@@ -91,13 +92,14 @@ nav > ul > a{
 /* Animated burger end here. */
 
 #header-bgc{
-    width: 100%;
-    height: 675px;/*było min max*/
+    /* width: 100%; */
+    width: 50%;
+    height: 50vh;
     background-color: rgba(128, 128, 128, 0.514);
-    background-image: url(img/bgc-min.png);
+    background-image: url(img/spaceUnsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -105,15 +107,24 @@ nav > ul > a{
     font-size: 20px;
 }
 #profile-div{
-    width: 490px;
-    height: 675px;/*było min max*/
-    background-image: url(img/profilowe-min.png);
+    /* width: 490px; */
+    width: 50%;
+    min-width: 200px;
+    height: 50vh;
+    background-image: url(img/profiloweNoweMinGimp.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0px 50px;
 }
-@media only screen and (min-width:414px){
+@media only screen and (min-width:490px){
     #header-bgc{
-        display: flex;
+        height: 75vh;
+        /* width: 60%; */
+    }
+    #profile-div{
+        height: 75vh;
+        /* width: 40%; */
+        min-width: 300px;
     }
 }
 @media only screen and (min-width:768px){
@@ -129,6 +140,15 @@ nav > ul > a{
         flex-direction: row;
         justify-content: space-evenly;
     }
+    #header-bgc{
+        /* height: 100vh; */
+        width: 70%;
+    }
+    #profile-div{
+        /* height: 100vh; */
+        min-width: 300px;
+        width: 30%;
+    }
     #menuButtonMobile{
         display: none;
     }
@@ -136,12 +156,18 @@ nav > ul > a{
 /* HEADER END HERE. */
 
 /* MAIN START HERE: */
+main{
+    padding-top: 25px;
+}
 /* Section */
 section{
     text-align: center;
     padding: 20px;
     color: black;
     background-color: #fbfbfd;
+}
+#header-title{
+    display: none;
 }
 #mobile-title{
     display: inline;
@@ -154,6 +180,9 @@ section{
     #mobile-title{
         display: none;
     }
+    #header-title{
+        display: inline;
+    }
 }
 /* Article */
 article{
@@ -162,7 +191,7 @@ article{
 }
 /* About & skills */
 #aboutAndSkills{
-    padding-top: 100px;
+    padding-top: 85px;
 }
 article > #circleBar{
     display: flex;
@@ -226,7 +255,7 @@ article > #circleBar > .percent > .number{
 }
 /* Portfolio */
 #portfolio{
-    padding-top: 100px;
+    padding-top: 85px;
 }
 #bigProjects{
     width: 100%;
@@ -261,7 +290,7 @@ article > #circleBar > .percent > .number{
 footer{
     height: 300px;
     width: 100%;
-    background-image: url(img/bgc-min.png);
+    background-image: url(img/spaceUnsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -270,7 +299,8 @@ footer{
     flex-direction: column;
 }
 footer > h2,
-footer > h4{
+footer > h4,
+footer > h4 > a{
     color: #fbfbfd;
     text-decoration: none;
 }
